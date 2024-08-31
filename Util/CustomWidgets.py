@@ -6,7 +6,7 @@ from PIL import Image
 from CTkListbox import *
 from ttkwidgets.autocomplete import AutocompleteEntryListbox
 
-import Util.Util as Util
+import Util.Utils as Utils
 
 
 class CustomSegmentedButton(ttk.Frame):
@@ -159,8 +159,8 @@ class CustomEntry(ttk.Frame):
 
 
 def CustomImage(Imagem, sizeX, sizeY):
-    Imagem = ctk.CTkImage(dark_image=Image.open(Util.pegarImagem(Imagem)),
-                          light_image=Image.open(Util.pegarImagem(Imagem)),
+    Imagem = ctk.CTkImage(dark_image=Image.open(Utils.pegarImagem(Imagem)),
+                          light_image=Image.open(Utils.pegarImagem(Imagem)),
                           size=(sizeX, sizeY))
     return Imagem
 
@@ -215,7 +215,7 @@ def CustomFrame2(frame):
 
 
 class CustomLabel(ttk.Frame):
-    def __init__(self, master=None, text="", font=Styles.fonte_texto, bg_color=Styles.cor_fundo,fg_color=Styles.cor_fundo,text_color=Styles.cor_texto, dica=None, image=None, pack=False, **kwargs):
+    def __init__(self, master=None, text="", font=Styles.fonte_texto, bg_color=Styles.cor_fundo, fg_color=Styles.cor_fundo, text_color=Styles.cor_texto, dica=None, image=None, pack=False, **kwargs):
         super().__init__(master, **kwargs)
 
         self.config(style="Custom.TFrame")

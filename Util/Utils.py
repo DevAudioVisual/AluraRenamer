@@ -11,6 +11,7 @@ global icone
 diretorio_atual = Path(__file__).parent.absolute()
 icone = os.path.join(diretorio_atual, 'icon.ico')
 
+
 def reabrir():
     try:
         if getattr(sys, 'frozen', False):  # If the program is compiled as an executable
@@ -21,12 +22,14 @@ def reabrir():
     finally:
         sys.exit()
 
+
 def is_url(path):
     try:
         result = urlparse(path)
         return all([result.scheme, result.netloc])
     except ValueError:
         return False
+
 
 def quebrar_linhas(texto, max_comprimento=80):
     palavras = texto.split()
@@ -47,22 +50,27 @@ def quebrar_linhas(texto, max_comprimento=80):
 
     return "\n".join(linhas)
 
+
 def pegarImagem(imagem):
-    return os.path.join("Imagens", imagem)
+    return os.path.join("Assets", imagem)
 
 
-def logWarning(func,mensagem,dialog = True):
+def logWarning(func, mensagem, dialog=True):
     logging.warn(f"Aviso na função {func} ", quebrar_linhas(mensagem))
     print(f"Aviso na função {func} ", quebrar_linhas(mensagem))
     if dialog:
-        messagebox.showwarning("Aviso",mensagem)
-def logInfo(func,mensagem,dialog = True):
+        messagebox.showwarning("Aviso", mensagem)
+
+
+def logInfo(func, mensagem, dialog=True):
     logging.debug(f"Info na função {func} ", quebrar_linhas(mensagem))
     print(f"Info na função {func} ", quebrar_linhas(mensagem))
     if dialog:
-        messagebox.showwarning("Info",mensagem)
-def LogError(func,mensagem,dialog = True):
+        messagebox.showwarning("Info", mensagem)
+
+
+def LogError(func, mensagem, dialog=True):
     logging.error(f"Erro na função {func} ", quebrar_linhas(mensagem))
     print(f"Erro na função {func} ", quebrar_linhas(mensagem))
     if dialog:
-        messagebox.showwarning("Erro",quebrar_linhas(mensagem))
+        messagebox.showwarning("Erro", quebrar_linhas(mensagem))
