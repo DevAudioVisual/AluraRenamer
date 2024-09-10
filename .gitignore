@@ -8,6 +8,8 @@ __pycache__/
 
 # Distribution / packaging
 .Python
+compilador.iss
+src/
 .vscode/
 z_Testes/
 build/
