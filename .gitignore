@@ -9,9 +9,12 @@ __pycache__/
 # Distribution / packaging
 .Python
 compilador.iss
+setup.py
 src/
 .vscode/
 z_Testes/
+Output/
+pathnotes.md
 build/
 develop-eggs/
 dist/

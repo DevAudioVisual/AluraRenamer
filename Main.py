@@ -17,11 +17,9 @@ def handle_interrupt(signum, frame):
 
 
 def setup_logging():
-    log_dir = os.path.join(os.path.expanduser(
-        "~"), "Documents", "AluraRenamer", "Logs")
+    log_dir = os.path.join(os.path.expanduser("~"), "Documents", "AluraRenamer", "Logs")
     os.makedirs(log_dir, exist_ok=True)
 
-    # Nome base do arquivo de log
     log_file = os.path.join(log_dir, "AluraRenamer.log")
     file_handler = TimedRotatingFileHandler(
         log_file,

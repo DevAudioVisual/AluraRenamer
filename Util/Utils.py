@@ -6,7 +6,7 @@ import sys
 from tkinter import messagebox
 from urllib.parse import urlparse
 
-version = "V0.0"
+version = "V0.1"
 
 global diretorio_atual
 global icone

@@ -61,8 +61,8 @@ class app():
                 else:
                     raise 
     def check_updates(self):
-        print("##############",self.release_version)
-        print("##############",self.current_version)
+        #print("##############",self.release_version)
+        #print("##############",self.current_version)
         if self.release_version > self.current_version:
             print("Atualização disponível")
             padrao = r'^(#{1,6})\s' 
