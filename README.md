@@ -1,5 +1,5 @@
 ![image](Assets/icon.ico)
-# AluraVideos
+# AluraRenamer
 
 <br>
 

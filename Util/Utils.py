@@ -6,6 +6,8 @@ import sys
 from tkinter import messagebox
 from urllib.parse import urlparse
 
+version = "V0.0"
+
 global diretorio_atual
 global icone
 diretorio_atual = Path(__file__).parent.absolute()
@@ -70,7 +72,7 @@ def logInfo(func, mensagem, dialog=True):
 
 
 def LogError(func, mensagem, dialog=True):
-    logging.error(f"Erro na função {func} ", quebrar_linhas(mensagem))
     print(f"Erro na função {func} ", quebrar_linhas(mensagem))
+    logging.error(f"Erro na função {func} ", quebrar_linhas(mensagem))
     if dialog:
         messagebox.showwarning("Erro", quebrar_linhas(mensagem))
